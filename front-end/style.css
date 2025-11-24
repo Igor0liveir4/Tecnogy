@@ -1,0 +1,83 @@
+/* ARQUIVO: style.css */
+
+/* --- Estilos do BODY e HTML (Manter) --- */
+html {
+    overflow: hidden; 
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    width: 100vw;
+    background-image: linear-gradient(
+        to bottom right, 
+        #2301ff, 
+        #000000  
+    );
+    background-repeat: no-repeat;
+    /* Remover 'display: flex' e centralização daqui! */
+}
+
+
+/* --- NOVO ESTILO: CENTRALIZAR O CONTEÚDO PRINCIPAL --- */
+.content-wrapper {
+    /* Usa posicionamento absoluto para centralizar no meio da tela */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Truque para centralizar usando as próprias dimensões do elemento */
+    transform: translate(-50%, -50%);
+    
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+/* Estilo do título para garantir a cor */
+.content-wrapper h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+
+/* --- HEADER: POSICIONAMENTO E ESTILO --- */
+header {
+    /* Faz o header ficar fixo no topo da janela, cobrindo toda a largura */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
+    padding: 15px 0;
+    z-index: 1000; /* Garante que fique acima de todo o conteúdo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 2. Container de Navegação */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* 3. Coloca os Itens de Lista em Linha */
+.main-nav li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+/* 4. Estilo dos Links */
+.main-nav a {
+    color: white; 
+    text-decoration: none; 
+    font-family: sans-serif;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+/* 5. Efeito Hover (passar o mouse) */
+.main-nav a:hover {
+    color: #ffd700;
+}
