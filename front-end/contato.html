@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="hearder-contato">
+    <header class="header-contato">
         <div class="logo">
             <img src="img/logo.jpg" alt="logo Tecnogy" class="hearder-logo">
         </div>
@@ -16,28 +16,32 @@
     </header>
     <main class="suporte-contente">
         <h2>Preencha as informações abaixo para entrar em contato:</h2>
-        <form action="#" method="post" class="form-suporte"> <!-- -->
+        <form action="#" method="post" class="form-suporte"> 
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
             </div>
+
             <div class="form-group">
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required>
             </div>
+
             <div class="form-group">
                 <label for="assunto">Assunto:</label>
                 <input type="text" id="assunto" name="assunto" required>
             </div>
-            <div class="form-group">
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-            </div>
-            <div class="button-container">
-                <button class="btn btn-primary">Enviar mensagem</button>
-                <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
-            </div>
-        </form>
+
+        <div class="form-group">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+        </div>
+    </form>
     </main>
 </body>
 </html>

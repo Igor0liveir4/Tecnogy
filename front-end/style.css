@@ -1,4 +1,27 @@
-/* ARQUIVO: style.css */
+/*Resetando o estilos*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho do elemento */
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #1A1A3A; /* O azul/roxo escuro de fundo */
+    color: #F8F8F8; /* Cor de texto padrão clara para contraste */
+}
+
+a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #00BFFF; /* Cor de link */
+}
+
+a:hover {
+    color: #0099CC;
+}
+
 
 /* --- Estilos do BODY e HTML (Manter) --- */
 html {
