@@ -4,165 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato Tecnogy</title>
-</head>
+    <!-- CSS estilo cinza -->
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<!-- add o style -->
-<style>
-/* CSS */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-    --primary-color: #0056b3;
-    --secondary-color: #6c757d;
-    --accent-color: #007bff;
-    --background-color: #f4f6f9;
-    --white: #ffffff;
-    --text-color: #333333;
-    --header-bg: #1a252f;
-}
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-.header-contato {
-    background-color: var(--header-bg);
-    color: var(--white);
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.hearder-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--accent-color);
-}
-.header-contato h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-.suporte-contente {
-    flex: 1;
-    width: 100%;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-}
-.suporte-contente h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: var(--header-bg);
-    font-size: 1.3rem;
-}
-.form-suporte {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-.form-group { margin-bottom: 20px; }
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: inherit;
-}
-.form-group input:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-color);
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
-}
-.form-actions {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-}
-.btn {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    transition: 0.3s;
-    font-weight: 600;
-}
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
-    flex: 1;
-}
-.btn-primary:hover { background-color: var(--accent-color); }
-.btn-secondary {
-    background-color: transparent;
-    border: 1px solid var(--secondary-color);
-    color: var(--secondary-color);
-}
-.btn-secondary:hover {
-    background-color: var(--secondary-color);
-    color: var(--white);
-}
-@media (max-width: 600px) {
-    .form-actions { flex-direction: column; }
-    .btn { width: 100%; }
-}
-</style>
+    :root {
+        --bg-gradient-start: #6c717d; /* Cinza claro */
+        --bg-gradient-end: #343740;   /* Cinza escuro */
+        --form-bg: rgba(160, 164, 175, 0.6); 
+        --card-bg: #9fa4ad;           /* CINZA (Cor dos cards) */
+        --white: #ffffff;
+        --black-border: #000000;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+        color: var(--white);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+    }
+
+    /* 1. LOGO (Topo Esquerda) */
+    .header-logo {
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .header-logo img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 2px solid #aeb2bc;
+        margin-bottom: 5px;
+        object-fit: cover;
+    }
+
+    .header-logo span {
+        font-weight: 800;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+        color: #222; 
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.2);
+    }
+
+    /* Container Principal */
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 1200px; /* Aumentei a largura para caber os 4 cards */
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    /* 2. FORMULÁRIO (Centro) */
+    .form-box {
+        background-color: var(--form-bg);
+        padding: 30px 50px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        margin-bottom: 50px; /* Espaço entre form e cards */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .form-header h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 5px;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .form-header u { text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid var(--black-border);
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+        background-color: white;
+        font-family: inherit;
+    }
+
+    .btn-enviar {
+        background: linear-gradient(to bottom, #6e737b, #3e4149);
+        color: white;
+        font-weight: 800;
+        font-size: 1.3rem;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+        width: 50%;
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    /* 3. CARDS (Em baixo, lado a lado) */
+    .info-cards {
+        display: flex;              /* Usando Flexbox para forçar linha */
+        flex-direction: row;        /* Direção horizontal */
+        justify-content: center;    /* Centralizar */
+        gap: 20px;                  /* Espaço entre eles */
+        width: 100%;
+        flex-wrap: wrap;            /* Permite quebrar linha só se a tela for muito pequena */
+    }
+
+    .card {
+        background-color: var(--card-bg); /* Fundo CINZA ESCURO igual a imagem */
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 220px;               /* Largura fixa para ficarem quadrados */
+        height: 200px;              /* Altura fixa */
+        color: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+        font-weight: 400;
+    }
+    </style>
+</head>
 <body>
-    <main class="main-container">
-        <!-- Cards de Informações-->
-            <div class="info-cards">
-            <!-- Card Endereço-->
-              <div class="card">
-                <img src="img/house.png" alt="Ícone Casa" class="card-icon">
-                <h3>NOSSO ESCRITÓRIO PARA ATENDIMENTO</h3>
-                <p>R. Correia de Andrade, 232</p>
-            </div>
-            <!--Card Whatsapp-->
-            <div class="card">
-                <img src="img/whatsapp.jpg" alt="Ícone Whatsapp" class="card-icon" >
-                <h3>Nosso whatsapp</h3>
-                <p>+55 (11) 2282-3438</p>
-            </div>
-            <!-- Card Instagram-->
-            <div class="card">
-                <img src="img/Instagram_icon.png" alt="Ícone Instagram" class="card-icon">
-                <h3>Nosso Instagram</h3>
-                <p>link:tecnogy.com</p>
-            </div>
-            <!--Card Email-->
-            <div class="card">
-                <img src="img/png-clipart-email-logo-icon-email-black-envelope-logo-miscellaneous-text-thumbnail.png" alt="Ícone Email" class="card-icon">
-                <h3>Nosso email</h3>
-                <p>contato@tecnogy.com</p>
-            </div>
-        </div>
-        <!-- Área do Formulário (Gradiente Azul) -->
-        <div class="form-container-gradient">
+    <!-- 1. Logo no Topo Esquerdo (Classe corrigida) -->
+    <div class="header-logo">
+        <img src="img/logo.jpg" alt="Logo Tecnogy">
+        <span>TECNOGY</span>
+    </div>
+    <main class="main-content">
+        <!-- 2. Formulário no Centro (Classe corrigida para .form-box) -->
+        <div class="form-box">
             <div class="form-header">
-                <h2>Entrar em contato</h2>
-                <h2>conosco</h2>
+                <h2><u>Entrar em contato</u></h2>
+                <h2><u>conosco</u></h2>
             </div>
             <form class="contact-form">
                 <input type="text" placeholder="Enter your Name" required>
                 <input type="email" placeholder="Enter a valid email address" required>
-                <textarea rows="4" placeholder=""></textarea> 
+                <textarea rows="4"></textarea>
                 <button type="submit" class="btn-enviar">Enviar</button>
             </form>
+        </div>
+        <!-- 3. Cards lado a lado (Dentro do main-content para alinhar) -->
+        <div class="info-cards">
+            <!-- Card Endereço -->
+            <div class="card">
+                <img src="img/house.png" alt="Ícone Casa">
+                <h3>NOSSO ESCRITÓRIO PARA ATENDIMENTO</h3>
+                <p>R. Correia de Andrade, 232</p>
+            </div>
+            <!-- Card Whatsapp -->
+            <div class="card">
+                <img src="img/whatsapp.jpg" alt="Ícone Whatsapp">
+                <h3>NOSSO WHATSAPP</h3>
+                <p>+55 (11) 2282-3438</p>
+            </div>
+            <!-- Card Instagram -->
+            <div class="card">
+                <img src="img/Instagram_icon.png" alt="Ícone Instagram">
+                <h3>NOSSO INSTAGRAM</h3>
+                <p>link:tecnogy.com</p>
+            </div>
+            <!-- Card Email -->
+            <div class="card">
+                <img src="img/png-clipart-email-logo-icon-email-black-envelope-logo-miscellaneous-text-thumbnail.png" alt="Ícone Email">
+                <h3>NOSSO EMAIL</h3>
+                <p>contato@tecnogy.com</p>
+            </div>
         </div>
     </main>
 </body>
