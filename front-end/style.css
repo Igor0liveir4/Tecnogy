@@ -1,116 +1,91 @@
-/*Resetando o estilos*/
+/* ARQUIVO: style.css */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho do elemento */
-}
-
-body {
-    font-family: sans-serif;
-    line-height: 1.6;
-    background-color: #1A1A3A; /* O azul/roxo escuro de fundo */
-    color: #F8F8F8; /* Cor de texto padrão clara para contraste */
-}
-
-a {
-    text-decoration: none; /* Remove sublinhado dos links */
-    color: #00BFFF; /* Cor de link */
-}
-
-a:hover {
-    color: #0099CC;
-}
-
-
-/* --- Estilos do BODY e HTML (Manter) --- */
 html {
-    overflow: hidden; 
+    overflow-x: hidden; /* permite scroll vertical, mas evita scroll lateral */
 }
+
 body {
     margin: 0;
     padding: 0;
-    height: 100vh; 
-    width: 100vw;
+    min-height: 100vh; 
+    width: 100%;
     background-image: linear-gradient(
         to bottom right, 
         #a8a8ac, 
         #000000  
     );
     background-repeat: no-repeat;
-}
-
-/* --- NOVO ESTILO: CENTRALIZAR O CONTEÚDO PRINCIPAL --- */
-.content-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    color: white;
+    background-attachment: fixed;
     font-family: sans-serif;
-    text-align: center;
-}
-.content-wrapper h1 {
-    margin: 0;
-    font-size: 2em;
 }
 
-/* --- HEADER: POSICIONAMENTO E ESTILO --- */
+
+/* ------------- HEADER FIXO ------------- */
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    
     background-color: rgba(0, 0, 0, 0.7); 
     z-index: 1000; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    
-    /* Centraliza o conteúdo interno (a lista UL) */
     display: flex; 
     justify-content: center; 
     align-items: center;
-    
-    padding: 30px 0; 
+    padding: 30px 0;
 }
 
-/* 2. Container de Navegação (AJUSTADO PARA FLEXBOX DE DISTRIBUIÇÃO) */
+/* Container da navegação */
 .main-nav ul {
     list-style: none;
-    padding: 0 40px; 
-    margin: 0; 
-    
-    /* Configuração Flexbox para ALINHAMENTO LATERAL */
+    padding: 0 40px;
+    margin: 0;
     display: flex; 
     align-items: center;
-    width: 100%; 
+    width: 100%;
     max-width: 1200px;
-    justify-content: flex-start; 
+    justify-content: flex-start;
 }
 
-/* 3. Coloca os Itens de Lista em Linha (CORRIGIDO) */
 .main-nav li {
-    /* REMOVIDO: display: inline-block; */
-    margin: 0 15px; 
+    margin: 0 15px;
 }
 
-/* 4. Estilo dos Links */
+/* Links do menu */
 .main-nav a {
     color: white; 
     text-decoration: none; 
-    font-family: sans-serif;
     font-size: 1.1em;
     padding: 5px 10px;
     transition: color 0.3s ease;
 }
 
-/* Estilo para os Ícones */
 .main-nav a i {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
-/* 5. Efeito Hover (passar o mouse) */
 .main-nav a:hover {
     color: #ffd700;
+}
+
+/* --- NOVO ESTILO: BOTÃO DE LOGIN (EMPURRADO PARA A DIREITA) --- */
+.login-button {
+    /* A LINHA QUE FAZ A MÁGICA com Flexbox */
+    margin-left: auto; 
+}
+
+/* ---------------------------------------------------- */
+/* Estilos para o link (A) (Aparência) */
+.login-button a {
+    background-color: #ffd700; 
+    color: #333; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    font-weight: bold;
+}
+
+.login-button a:hover {
+    background-color: #fff; 
+    color: #333;
 }
