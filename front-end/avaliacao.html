@@ -7,12 +7,20 @@
 
 </head>
     <style>
+         :root {
+        --bg-gradient-start: #6c717d; /* Cinza claro */
+        --bg-gradient-end: #343740;   /* Cinza escuro */
+        --form-bg: rgba(160, 164, 175, 0.6); 
+        --card-bg: #9fa4ad;           /* CINZA (Cor dos cards) */
+        --white: #ffffff;
+        --black-border: #000000;
+    }
         body {
             margin: 0;
             padding: 0;
-            background-color: #ffffff3f;  /* Cor de fundo mais suave */
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
             font-family: 'Arial', sans-serif;
-            color: #72717185;
+            color: var(--white);
         }
         
         
@@ -29,7 +37,7 @@
             color: #000000;
 
             /* Fundo do título */
-            background: #9f9f9f(94, 91, 91, 0.8);
+            background: var(--form-bg);
             display: inline-block;
             padding: 20px 50px;
             border-radius: 10px;
@@ -40,7 +48,7 @@
         .avaliacoes {
             text-align: center;
             padding: 8% 0;
-            background-color: #9f9f9f; /* Fundo branco para a seção de avaliações */
+            background-color: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
         }
 
         .section-title {
@@ -144,7 +152,7 @@
     <!-- SESSÃO DE AVALIAÇÕES COM FUNDO BRANCO -->
     <section class="avaliacoes">
         <!-- TÍTULO DA PRIMEIRA SEÇÃO -->
-        <div class="section-title">Avaliações Recentes</div>
+        <div class="section-title">Avaliações Populares</div>
 
         <div class="cards-container">
             <div class="card">
@@ -170,7 +178,7 @@
         <hr>
 
         <!-- TÍTULO DA SEGUNDA SEÇÃO -->
-        <div class="section-title">Avaliações Populares</div>
+        <div class="section-title">Avaliações Recentes</div>
 
         <div class="cards-container">
             <div class="card">
