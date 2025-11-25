@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar em Contato</title>
-    <link rel="icon" type="image/jpg" href="img/logo.jpg">
+    <title>Contato Tecnogy</title>
 </head>
 
 <!-- add o style -->
@@ -124,40 +123,52 @@ body {
 }
 </style>
 <body>
-    <header class="header-contato">
-        <div class="logo">
-            <img src="img/logo.jpg" alt="logo Tecnogy" class="hearder-logo">
-        </div>
-        <h1>Tecnogy</h1>
-    </header>
-    <main class="suporte-contente">
-        <h2>Preencha as informações abaixo para entrar em contato:</h2>
-        <form action="#" method="post" class="form-suporte"> 
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+    <main class="main-container">
+        <!-- Cards de Informações-->
+            <div class="info-cards">
+            <!-- Card Endereço-->
+              <div class="card">
+                <img src="img/house.png" alt="Ícone Casa" class="card-icon">
+                <h3>NOSSO ESCRITÓRIO PARA ATENDIMENTO</h3>
+                <p>R. Correia de Andrade, 232</p>
             </div>
-
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+            <!--Card Whatsapp-->
+            <div class="card">
+                <img src="img/whatsapp.jpg" alt="Ícone Whatsapp" class="card-icon" >
+                <h3>Nosso whatsapp</h3>
+                <p>+55 (11) 2282-3438</p>
             </div>
-
-            <div class="form-group">
-                <label for="assunto">Assunto:</label>
-                <input type="text" id="assunto" name="assunto" required>
+            <!-- Card Instagram-->
+            <div class="card">
+                <img src="img/Instagram_icon.png" alt="Ícone Instagram" class="card-icon">
+                <h3>Nosso Instagram</h3>
+                <p>link:tecnogy.com</p>
             </div>
-
-        <div class="form-group">
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            <!--Card Email-->
+            <div class="card">
+                <img src="img/png-clipart-email-logo-icon-email-black-envelope-logo-miscellaneous-text-thumbnail.png" alt="Ícone Email" class="card-icon">
+                <h3>Nosso email</h3>
+                <p>contato@tecnogy.com</p>
+            </div>
         </div>
-
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Enviar</button>
-            <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+        <!-- Área do Formulário (Gradiente Azul) -->
+        <div class="form-container-gradient">
+            <div class="form-header">
+                <h2>Entrar em contato</h2>
+                <h2>conosco</h2>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Enter your Name" required>
+                <input type="email" placeholder="Enter a valid email address" required>
+                <textarea rows="4" placeholder=""></textarea> 
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
         </div>
-    </form>
     </main>
+    <!-- Logo no canto inferior esquerdo -->
+    <div class="footer-logo">
+        <div class="logo-circle">T</div>
+        <span>TECNOGY</span>
+    </div>
 </body>
 </html>
