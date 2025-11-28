@@ -3,62 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar em Contato</title>
-    <link rel="icon" type="image/jpg" href="img/logo.jpg">
-    <link rel="stylesheet" href="style.css">
+    <title>Tecnogy - Contato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* RESET BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            /* Fundo degradê */
+            background: linear-gradient(180deg, #9fa4ac 0%, #3e4453 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+
+        /* --- LOGO (APENAS A IMAGEM NO TOPO) --- */
+        .header-logo {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            z-index: 10;
+        }
+
+        /* ESTILO DA IMAGEM DA LOGO */
+        .img-logo-principal {
+            width: 100px; /* Aumentei um pouco já que está sozinha */
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            
+            /* Borda Roxa e Brilho Neon */
+            border: 3px solid #9e6be8;
+            box-shadow: 0 0 15px rgba(158, 107, 232, 0.6);
+            
+            background-color: #000; /* Fundo preto caso a imagem não carregue */
+        }
+
+        /* --- ÁREA DO FORMULÁRIO --- */
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 50px; 
+        }
+
+        .form-box {
+            background-color: rgba(255, 255, 255, 0.25); /* Vidro */
+            padding: 40px;
+            border-radius: 15px;
+            width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-box h2 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-decoration: underline;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #000;
+            font-size: 16px;
+            font-weight: bold;
+            outline: none;
+            background: white;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #888;
+            font-weight: bold;
+        }
+
+        .btn-enviar {
+            width: 180px;
+            margin: 10px auto 0;
+            padding: 12px;
+            background: linear-gradient(to bottom, #777, #444);
+            color: white;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+            text-transform: capitalize;
+        }
+
+        .btn-enviar:hover {
+            background: linear-gradient(to bottom, #666, #222);
+        }
+
+        /* --- CARDS INFERIORES --- */
+        .info-cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            width: 100%;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: rgba(160, 164, 172, 0.6);
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 15px;
+            color: white;
+        }
+
+        .card img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 13px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 800;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        .card p {
+            font-size: 12px;
+            word-wrap: break-word;
+            line-height: 1.4;
+        }
+    </style>
 </head>
 
-<!-- add o style -->
-
 <body>
-    <header class="header-contato">
-    <div class="logo">
-        <img src="img/logo.jpg" alt="logo Tecnogy" class="header-logo">
-    </div>
-    <h1>Tecnogy</h1>
-</header>
+    
+    <!-- HEADER: APENAS A IMAGEM -->
+    <header class="header-logo">
+        <!-- IMPORTANTE: Se sua imagem for JPG, mude para logo.jpg abaixo -->
+        <img src="img/logo.png" alt="Logo Tecnogy" class="img-logo-principal">
+    </header>
 
-    <main class="suporte-contente">
-        <h2>Preencha as informações abaixo para entrar em contato:</h2>
-        <form action="#" method="post" class="form-suporte"> <!-- -->
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Enter your Name" required>
-                <input type="email" placeholder="Enter a valid email address" required>
-                <textarea rows="4"></textarea>
+    <main class="main-content">
+        <div class="form-box">
+            <h2>Entrar em contato <br> conosco</h2>
+
+            <form class="contact-form" action="#" method="post">
+                <input type="text" name="nome" placeholder="Enter your Name" required>
+                <input type="email" name="email" placeholder="Enter a valid email address" required>
+                <textarea name="mensagem" rows="5"></textarea>
                 <button type="submit" class="btn-enviar">Enviar</button>
             </form>
         </div>
-        <!-- 3. Cards lado a lado (Dentro do main-content para alinhar) -->
-        <div class="info-cards">
-            <!-- Card Endereço -->
-            <div class="card">
-                <img src="img/house.png" alt="Ícone Casa">
-                <h3>NOSSO ESCRITÓRIO PARA ATENDIMENTO</h3>
-                <p>R. Correia de Andrade, 232</p>
-            </div>
-            <!-- Card Whatsapp -->
-            <div class="card">
-                <img src="img/whatsapp.jpg" alt="Ícone Whatsapp">
-                <h3>NOSSO WHATSAPP</h3>
-                <p>+55 (11) 2282-3438</p>
-            </div>
-            <!-- Card Instagram -->
-            <div class="card">
-                <img src="img/Instagram_icon.png" alt="Ícone Instagram">
-                <h3>NOSSO INSTAGRAM</h3>
-                <p>link:tecnogy.com</p>
-            </div>
-            <!-- Card Email -->
-            <div class="card">
-                <img src="img/png-clipart-email-logo-icon-email-black-envelope-logo-miscellaneous-text-thumbnail.png" alt="Ícone Email">
-                <h3>NOSSO EMAIL</h3>
-                <p>contato@tecnogy.com</p>
-            </div>
-        </div>
     </main>
+
+    <div class="info-cards">
+        <div class="card">
+            <img src="img/localização.pnj.jpeg" alt="Ícone Localização">
+            <h3>NOSSO ESCRITÓRIO PARA ATENDIMENTO</h3>
+            <p>R.Correia de Andrade, 232</p>
+        </div>
+        <div class="card">
+            <img src="img/whatsapp.jpg" alt="Ícone Whatsapp">
+            <h3>NOSSO WHATSAPP</h3>
+            <p>+55 (11) 2282-3438</p>
+        </div>
+        <div class="card">
+            <img src="img/Instagram_icon.png" alt="Ícone Instagram">
+            <h3>NOSSO INSTAGRAM</h3>
+            <p>link:tecnogy.com</p>
+        </div>
+        <div class="card">
+            <img src="img/png-clipart-email-logo-icon-email-black-envelope-logo-miscellaneous-text-thumbnail.png"
+                alt="Ícone Email">
+            <h3>NOSSO EMAIL</h3>
+            <p>contato@tecnogy.com</p>
+        </div>
+    </div>
 </body>
 </html>
