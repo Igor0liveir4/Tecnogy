@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,8 @@
 
     <!-- Link CSS externo -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-          integrity="sha512-KY4Q4X1Dbs3Cm2zQ5wqW0z0+8eZ1g9x4c2p+0KZ8DqVzVZVrTfOm2XZL+e2OBuZgyK+VhXH+j0pI8OBrb+2ZGw==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <!-- Cabeçalho do site -->
     <header>
@@ -22,20 +19,49 @@
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="avaliacao.html">Avaliação</a></li>
                 <li><a href="contato.html">Contato</a></li>
-                <li class="login-button"><a href="login.html"><i class="fas fa-user" aria-hidden="true"></i> Login</a></li>
             </ul>
         </nav>
     </header>
+    <!-- FUNDO CINZA DO PROTÓTIPO -->
+    <section class="hero">
+        <h1 class="titulo-principal">Nossos serviços</h1>
 
-    <!-- Conteúdo principal -->
-    <main class="content-wrapper">
-        <h1>Tecnogy</h1>
-        <p>Bem-vindo ao Tecnogy, seu portal de tecnologia e inovação.</p>
-    </main>
+        <div class="info-cards">
 
-    <!-- Rodapé opcional -->
+            <div class="card">
+                <h3>Desenvolvidores Web</h3>
+                <p>
+                    Criação de sites institucionais, sistemas web responsivos,
+                    otimizados para SEO e alta performance.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Otimização de Performance</h3>
+                <p>
+                    Melhoria do tempo de carregamento (Core Web Vitals),
+                    limpeza de código e otimização de imagens para deixar
+                    o site voando.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Manutenção & Suporte</h3>
+                <p>
+                    Acompanhamento contínuo, correção de bugs e atualizações
+                    de segurança para garantir que seu site nunca saia do ar.
+                </p>
+            </div>
+
+        </div>
+        <!-- BOTÃO "Clique aqui para mais" -->
+        <a href="#" class="btn-mais">Clique aqui para mais serviços</a>
+    </section>
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 Tecnogy. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
     </footer>
 </body>
+
 </html>
