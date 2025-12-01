@@ -75,7 +75,6 @@ header {
     background-color: transparent;
     color: white; 
     text-align: center;
-    z-index: 100; /*Garante que o menu fique acima de tudo*/
 }
 
 .main-nav {
@@ -99,8 +98,6 @@ header {
 /* Efeito Hover no Logo (Usa sua cor neon) */
 .header-logo:hover {
     transform: scale(1.1); /* Aumenta levemente */
-    /* Cria um brilho roxo usando variável global */
-    filter: drop-shadow(0 0 8px var(--accent-color)); 
 }
 
 .main-nav ul {
@@ -110,25 +107,25 @@ header {
     display: flex;
     justify-content: center; 
     align-items: center;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 25px 0;
 }
 
 .main-nav li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .main-nav a {
     color: var(--text-light);
     text-decoration: none;
     font-size: 1.1em;
-    padding: 8px 12px;
+    padding: 5px 10px;
     border-radius: var(--border-radius);
     transition: color var(--transition-speed);
-    font-weight: 500;
 }
 
 .main-nav a i {
-    margin-right: 8px;
+    margin-right: 5px;
 }
 
 .main-nav a:hover,
