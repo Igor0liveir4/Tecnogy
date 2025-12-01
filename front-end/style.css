@@ -1,4 +1,4 @@
-/*RESET E VARIÁVEIS GLOBAIS*/
+/*reset  e  variaveis globais */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@
     --text-normal: #e5e5e5;
     --input-bg: #1a1a1a;
     --input-border: #444;
-    /* COR DE DESTAQUE PRINCIPAL (NEON) */
+    /* cor  de  destaque  principal (NEON) */
     --accent-color: #9e6be8; 
     /* Variáveis da Página Contato */
     --contato-bg-start: #9fa4ac;
@@ -42,7 +42,7 @@
     --sobre-text-color: var(--white);
 }
 
-/*BODY E ESTRUTURA BASE (Fundo Padrão para Todas as Páginas)*/
+/*BODY e estrutura  Base  (Fundo Padrão para Todas as Páginas)*/
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -69,7 +69,7 @@ body {
     color: var(--sobre-text-color);
 }
 
-/*HEADER DE NAVEGAÇÃO GLOBAL*/
+/*header de  navegação global*/
 header {
     width: 100%;
     background-color: transparent;
@@ -89,7 +89,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7); /* Fundo sutil para o menu */
-    /* AJUSTE SOLICITADO: Aumenta o padding para crescer o box preto */
+    /* ajuste para Aumentar o padding  e para crescer o box preto */
     padding: 25px 0; 
 }
 
@@ -115,7 +115,7 @@ header {
 }
 
 
-/*PÁGINA: HOME*/
+/*pagina do  menu  home*/
 
 .hero {
     width: 100%;
@@ -152,7 +152,7 @@ header {
     font-size: 14px;
 }
 
-/*PÁGINA: CONTATO*/
+/*pagina de contato*/
 .header-logo-container {
     position: absolute;
     top: 30px;
@@ -240,7 +240,7 @@ header {
     background: linear-gradient(to bottom, var(--btn-contato-hover-start), var(--btn-contato-hover-end));
 }
 
-/* CARDS INFERIORES */
+/* Cards inferiores */
 .info-cards {
     display: flex;
     justify-content: center;
@@ -285,7 +285,7 @@ header {
     line-height: 1.4;
 }
 
-/*PÁGINA: AVALIAÇÃO*/
+/* pagina  de  avaliação*/
 .content-wrapper-avaliacao {
     text-align: center;
     margin-top: 100px; 
@@ -376,7 +376,7 @@ header {
     border: 1px solid #ddd;
 }
 
-/*PÁGINA: SOBRE*/
+/*pagina do  Sobre */
 
 .sobre-page > header {
     background-color: transparent; 
@@ -425,7 +425,7 @@ header {
     font-weight: 700;
 }
 
-/* NOVOS ESTILOS PARA CONTEÚDO DA PÁGINA SOBRE */
+/* Novos  Estilos  Para Conteudo da  pagina sobre */
 .valores {
     padding: 30px 0;
 }
