@@ -1,4 +1,4 @@
-/*reset e variaveis globais */
+/*RESET E VARIÁVEIS GLOBAIS*/
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +42,7 @@
     --sobre-text-color: var(--white);
 }
 
-/*BODY e estrutura Base (Fundo Padrão para Todas as Páginas)*/
+/*BODY E ESTRUTURA BASE (Fundo Padrão para Todas as Páginas)*/
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -69,7 +69,7 @@ body {
     color: var(--sobre-text-color);
 }
 
-/*header de navegação global*/
+/*HEADER DE NAVEGAÇÃO GLOBAL*/
 header {
     width: 100%;
     background-color: transparent;
@@ -79,25 +79,25 @@ header {
 
 .main-nav {
     width: 100%;
-    display: flex; /* Ativa o Flexbox no container pai */
-    justify-content: space-between; /* Logo na esquerda, Menu na direita */
-    align-items: center; /* Centraliza verticalmente */
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro levemente transparente */
-    padding: 15px 50px; /* Espaçamento interno */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.8); /* Sombra suave abaixo do menu */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 15px 50px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
 }
 
 .header-logo {
-    height: 60px; /* Define altura fixa para não quebrar o layout */
-    width: auto;  /* Mantém a proporção */
+    height: 60px; 
+    width: auto;  
     cursor: pointer;
     transition: transform var(--transition-speed), filter var(--transition-speed);
-    display: block; /* Remove espaços fantasmas abaixo da imagem */
+    display: block; 
 }
 
-/* Efeito Hover no Logo (Usa sua cor neon) */
+/* Efeito Hover no Logo */
 .header-logo:hover {
-    transform: scale(1.1); /* Aumenta levemente */
+    transform: scale(1.1); 
 }
 
 .main-nav ul {
@@ -107,8 +107,7 @@ header {
     display: flex;
     justify-content: center; 
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo sutil para o menu */
-    /* AJUSTE SOLICITADO: Aumenta o padding para crescer o box preto */
+    background-color: rgba(0, 0, 0, 0.7); 
     padding: 25px 0; 
 }
 
@@ -132,7 +131,7 @@ header {
 .main-nav a:hover,
 .main-nav a:focus {
     color: var(--accent-color);
-    box-shadow: 0 0 10px var(--accent-color); /* Brilho neon no botão */ 
+    box-shadow: 0 0 10px var(--accent-color); 
 }
 
 /*PÁGINA: HOME*/
@@ -142,7 +141,6 @@ header {
     padding: 30px 20px;
     background-color: rgba(160, 164, 172, 0.4); 
     flex-grow: 1; 
-    /* Centraliza o conteúdo da Home */
     text-align: center; 
 }
 
@@ -174,7 +172,9 @@ header {
     font-size: 14px;
 }
 
-/*pagina de contato*/
+/*PÁGINA: CONTATO*/
+
+/* Os blocos .header-logo-container e .img-logo-principal foram mantidos por histórico, mas não são usados no HTML Contato atual */
 .header-logo-container {
     position: absolute;
     top: 30px;
@@ -262,7 +262,7 @@ header {
     background: linear-gradient(to bottom, var(--btn-contato-hover-start), var(--btn-contato-hover-end));
 }
 
-/* Cards inferiores */
+/* Cards inferiores (usados em Home e Contato) */
 .info-cards {
     display: flex;
     justify-content: center;
@@ -285,6 +285,7 @@ header {
     padding: 15px;
     color: white;
     border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .card img {
@@ -307,7 +308,16 @@ header {
     line-height: 1.4;
 }
 
-/* pagina de avaliação*/
+/* HOVER para cards de Home e Contato */
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
+                0 0 10px var(--accent-color); 
+    background-color: rgba(160, 164, 172, 0.8);
+    cursor: pointer;
+}
+
+/* PÁGINA: AVALIAÇÃO*/
 .content-wrapper-avaliacao {
     text-align: center;
     margin-top: 100px; 
@@ -436,13 +446,11 @@ header {
     width: 100%;
     text-align: center;
     flex-grow: 1; 
-    display: flex; 
-    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha */
-    justify-content: center; /* Centraliza o grupo de imagens */
+    display: block;
 }
 
 .main-sobre h2, .main-sobre h3 {
-    width: 100%; /* Garante que o título ocupe a largura completa */
+    width: 100%; 
     color: var(--sobre-text-color);
     margin-top: 40px;
     margin-bottom: 20px;
@@ -450,52 +458,66 @@ header {
     font-weight: 700;
 }
 
-/* ORGANIZAÇÃO DAS IMAGENS DA EQUIPE */
-.main-sobre > img { 
-    width: 100%; 
-    max-width: 200px; 
-    height: 200px; 
-    object-fit: cover;
-    border-radius: var(--border-radius);
-    margin: 10px; /* Espaçamento entre as imagens */
-}
-
-
-
-.equipe-fotos {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 20px; 
+/* CONTÊINER Flexbox para dispor os cards da equipe */
+.team-cards-container {
+    display: flex;
+    justify-content: center; /* Centraliza os cards */
+    gap: 30px; 
     padding: 20px 0;
     width: 100%;
+    max-width: 900px; /* Limita a largura total para ajudar na centralização */
+    margin: 0 auto;
 }
 
-.equipe-fotos img {
-    width: 100%;
-    max-width: 200px; 
-    height: 200px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    object-fit: cover; 
-}
-
-.equipe-fotos img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-@media (min-width: 850px) {
-.main-sobre > img {
-flex-basis: calc(25% - 20px); 
-}
+/* Estilo de cada Card Individual da Equipe */
+.team-member-card {
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 25px; 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
     
-.equipe-fotos img {
-    flex-basis: calc(25% - 15px); 
-    }
+    /* ALTERAÇÃO CHAVE: Define o tamanho para 2 por linha */
+    flex-basis: 45%; 
+    min-width: 250px; 
+    max-width: 450px; 
+    
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 auto; /* Centraliza o card quando estiver sozinho na linha (em telas menores) */
 }
-/* Novos Estilos Para Conteudo da pagina sobre */
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 
+                0 0 10px var(--accent-color); 
+}
+
+.team-member-card .member-photo {
+    width: 100%; 
+    height: 220px; 
+    max-width: 220px; 
+    object-fit: cover;
+    border-radius: 50%; 
+    margin-bottom: 15px;
+    border: 3px solid var(--accent-color);
+}
+
+.team-member-card h3 {
+    color: var(--white);
+    font-size: 1.2em; 
+    margin-bottom: 8px;
+}
+
+.team-member-card p {
+    color: var(--text-normal);
+    font-size: 1em; 
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+/* Novos Estilos Para Conteudo da pagina sobre (valores) - Mantidos abaixo das regras da equipe */
 .valores {
     padding: 30px 0;
 }
@@ -526,13 +548,6 @@ flex-basis: calc(25% - 20px);
                 0 0 15px var(--accent-color);
 }
 
-.card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
-                0 0 10px var(--accent-color); 
-    background-color: rgba(160, 164, 172, 0.8);
-    cursor: pointer;
-}
 .card-valor i {
     font-size: 3em;
     color: var(--accent-color); 
@@ -549,10 +564,6 @@ flex-basis: calc(25% - 20px);
     color: var(--text-normal);
 }
 
-.equipe {
-    padding: 30px 0;
-    margin-bottom: 50px; 
-}
 
 /*RODAPÉ (GLOBAL)*/
 footer {
