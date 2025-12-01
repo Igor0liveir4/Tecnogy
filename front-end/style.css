@@ -1,96 +1,115 @@
 /* ============================================================
-   RESET E VARIÁVEIS
-   ============================================================ */
+    RESET E VARIÁVEIS GLOBAIS
+    ============================================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 :root {
-    --dark-bg-1: #0a0a0a;    /* preto profundo */
-    --dark-bg-2: #2c2c2c;    /* cinza escuro */
-    --accent-bg1: #3a3a3a;   /* tom intermediário */
-    --header-bg: rgba(0, 0, 0, 0.85);
-    --text-light: #ffffff;
-    --text-normal: #e5e5e5;
-    --accent-gold: #ffd700;
-    --input-bg: #1a1a1a;
-    --input-border: #444;
-    --btn-primary-bg: #333;
-    --btn-primary-hover: #555;
+    /* Variáveis Globais */
     --transition-speed: 0.3s;
     --border-radius: 8px;
+    --white: #ffffff;
+    --black: #000000;
+
+    /* Variáveis de Fundo e Texto Padrão (Dark Theme Sugerido) */
+    --dark-bg-1: #0a0a0a; 
+    --dark-bg-2: #2c2c2c; 
+    --accent-bg1: #3a3a3a; 
+    --text-light: #ffffff;
+    --text-normal: #e5e5e5;
+    --input-bg: #1a1a1a;
+    --input-border: #444;
+
+    /* Variáveis da Página Contato (Usadas agora como Padrão) */
+    --contato-bg-start: #9fa4ac;
+    --contato-bg-end: #3e4453;
+    --logo-neon-color: #9e6be8;
+    --form-box-bg-contato: rgba(255, 255, 255, 0.25);
+    --btn-contato-start: #777;
+    --btn-contato-end: #444;
+    --btn-contato-hover-start: #666;
+    --btn-contato-hover-end: #222;
+    --card-bg-contato: rgba(160, 164, 172, 0.6);
+
+    /* Variáveis da Página Avaliação */
+    --star-color: #F4B400;
+    --user-icon-bg: #FFBB00;
+    --card-bg-avaliacao: #ffffff;
+    --card-text-avaliacao: #333;
+    --avaliacao-form-bg: rgba(160, 164, 175, 0.6); 
+    
+    /* Variáveis da Página Sobre */
+    --sobre-text-color: var(--white);
 }
 
 /* ============================================================
-   BODY E ESTRUTURA BASE
-   ============================================================ */
+    BODY E ESTRUTURA BASE (Fundo Padrão para Todas as Páginas)
+    ============================================================ */
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     width: 100%;
+    
+    /* GRADIENTE DE FUNDO PADRÃO (Da página de Contato, aplicado a todos) */
+    background: linear-gradient(180deg, var(--contato-bg-start) 0%, var(--contato-bg-end) 100%);
+    
     color: var(--text-normal);
-
-    /* Gradiente animado */
-    background: linear-gradient(135deg, var(--dark-bg-2), var(--accent-bg1), var(--dark-bg-1));
-    background-size: 400% 400%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    animation: gradientBG 25s ease infinite;
-
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: space-between;
+    padding-bottom: 20px;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Garantir que as classes de página não sobrescrevam o fundo, mas definam a cor do texto */
+.avaliacao-page, .contato-page {
+    /* Fundo herdado do body */
+    color: var(--white);
 }
 
-/* Compensa o header fixo */
-main, .suporte-contente {
-    margin-top: 120px;
-    padding: 20px;
+.sobre-page {
+    /* Fundo herdado do body */
+    color: var(--sobre-text-color); /* Cor branca para o texto sobre o fundo escuro */
 }
+
 
 /* ============================================================
-   HEADER FIXO
-   ============================================================ */
+    HEADER DE NAVEGAÇÃO GLOBAL
+    ============================================================ */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    background-color: var(--header-bg);
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: transparent; /* Padrão */
+    color: white; 
+    text-align: center;
+}
+
+/* Menu de navegação (Fundo escuro e transparente para o menu em si) */
+.main-nav {
+    width: 100%;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
-    backdrop-filter: blur(5px);
-}
-
-/* Navegação */
-.main-nav ul {
-    list-style: none;
-    padding: 0 40px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo sutil para o menu */
+    padding: 15px 0;
 }
 
 .main-nav li {
-    margin: 0 15px;
-    position: relative;
+    margin: 0 20px;
 }
 
 .main-nav a {
@@ -107,201 +126,382 @@ header {
 
 .main-nav a:hover,
 .main-nav a:focus {
-    color: var(--accent-gold);
-}
-
-/* Botão login empurrado para a direita */
-.login-button {
-    margin-left: auto;
-}
-
-.login-button a {
-    background-color: var(--accent-gold);
-    color: #333;
-    border-radius: var(--border-radius);
-    padding: 10px 20px;
-    font-weight: bold;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-    transition: all var(--transition-speed);
-}
-
-.login-button a:hover {
-    background-color: #fff;
-    color: #000;
-    transform: translateY(-2px);
+    color: var(--accent-gold); /* Amarelo dourado como destaque */
 }
 
 /* ============================================================
-   HEADER DA PÁGINA
-   ============================================================ */
-.header-contato {
-    background-color: var(--header-bg);
-    color: var(--text-light);
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    border-radius: var(--border-radius);
-    margin-bottom: 30px;
+    PÁGINA: CONTATO
+    ============================================================ */
+
+/* Container da Logo (Para posicionar a imagem) */
+.header-logo-container {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    z-index: 10;
 }
 
-.header-logo {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 80px;
-    height: 80px;
+/* Estilo da Imagem da Logo */
+.img-logo-principal {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--accent-gold);
+    border: 3px solid var(--logo-neon-color);
+    box-shadow: 0 0 15px rgba(158, 107, 232, 0.6);
+    background-color: var(--black);
 }
 
-/* ============================================================
-   FORMULÁRIO DE SUPORTE
-   ============================================================ */
-.suporte-contente h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: var(--text-light);
-    font-size: 1.5rem;
-}
-
-.form-suporte {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 40px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-    max-width: 600px;
-    margin: 0 auto;
-    transition: transform var(--transition-speed);
-}
-
-.form-suporte:hover {
-    transform: translateY(-3px);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: var(--text-light);
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    background-color: var(--input-bg);
-    border: 1px solid var(--input-border);
-    color: var(--text-normal);
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-gold);
-    box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
-}
-
-/* Botões */
-.form-actions {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.btn {
-    padding: 12px 24px;
-    border: none;
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all var(--transition-speed);
-}
-
-.btn-primary {
-    background-color: var(--btn-primary-bg);
-    color: var(--text-light);
+/* Área principal do Contato */
+.main-content-contato {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px; /* Espaço para o menu e logo */
 }
 
-.btn-primary:hover {
-    background-color: var(--btn-primary-hover);
-    transform: translateY(-2px);
+.form-box {
+    background-color: var(--form-box-bg-contato); /* Vidro */
+    padding: 40px;
+    border-radius: 15px;
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn-secondary {
-    background-color: transparent;
-    border: 1px solid var(--text-light);
-    color: var(--text-light);
+.form-box h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
 }
 
-.btn-secondary:hover {
-    background-color: var(--text-light);
-    color: #000;
-    transform: translateY(-2px);
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--black);
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    background: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+    font-weight: bold;
+}
+
+.btn-enviar {
+    width: 180px;
+    margin: 10px auto 0;
+    padding: 12px;
+    background: linear-gradient(to bottom, var(--btn-contato-start), var(--btn-contato-end));
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+
+.btn-enviar:hover {
+    background: linear-gradient(to bottom, var(--btn-contato-hover-start), var(--btn-contato-hover-end));
+}
+
+/* CARDS INFERIORES */
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: var(--card-bg-contato);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card p {
+    font-size: 12px;
+    word-wrap: break-word;
+    line-height: 1.4;
 }
 
 /* ============================================================
-   RESPONSIVIDADE
-   ============================================================ */
-@media (max-width: 992px) {
+    PÁGINA: AVALIAÇÃO
+    ============================================================ */
+
+/* TÍTULO E BOTÃO */
+.content-wrapper-avaliacao {
+    text-align: center;
+    margin-top: 100px; /* Compensa o menu fixo */
+}
+
+.content-wrapper-avaliacao h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--black);
+
+    /* Fundo do título */
+    background: var(--avaliacao-form-bg);
+    display: inline-block;
+    padding: 20px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* SEÇÃO DE AVALIAÇÕES */
+.avaliacoes {
+    text-align: center;
+    padding: 4% 0;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: var(--white); /* Mudança para branco */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cards-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card-avaliacao {
+    background: var(--card-bg-avaliacao);
+    color: var(--card-text-avaliacao);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.card-avaliacao:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.user-icon {
+    font-size: 45px;
+    background: var(--user-icon-bg);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -40px auto 15px auto;
+}
+
+.card-avaliacao p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.stars {
+    font-size: 26px;
+    color: var(--star-color);
+}
+
+/* SEPARADOR ENTRE SEÇÕES */
+.avaliacoes hr {
+    margin: 60px auto;
+    width: 80%;
+    border: 1px solid #ddd;
+}
+
+/* ============================================================
+    PÁGINA: SOBRE
+    ============================================================ */
+
+/* Header para pagina SOBRE - Fundo Transparente agora */
+.sobre-page > header {
+    background-color: transparent; 
+    padding: 20px;
+}
+
+.header-sobre h1 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: var(--white);
+    padding-top: 20px;
+}
+
+.header-sobre p {
+    margin: 10px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+    color: var(--white);
+    padding: 0 15px 20px 15px;
+}
+
+.header-sobre hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    margin: 0 0 15px 0;
+}
+
+.main-sobre {
+    padding: 30px;
+    margin-top: 30px;
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+.main-sobre h2, .main-sobre p {
+    color: var(--sobre-text-color);
+}
+
+
+/* ============================================================
+    RODAPÉ (GLOBAL)
+    ============================================================ */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #222;
+    color: white;
+    width: 100%;
+    font-size: 0.9em;
+    margin-top: auto; 
+}
+
+footer a {
+    color: #fffb00;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+    RESPONSIVIDADE GERAL
+    ============================================================ */
+@media (max-width: 768px) {
     .main-nav ul {
         flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .login-button {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 15px 0;
-    }
-
-    .main-nav a {
-        font-size: 1em;
-        padding: 4px 8px;
     }
 
     .main-nav li {
-        margin: 0 8px;
+        margin: 5px 10px;
     }
-}
-
-@media (max-width: 600px) {
-    .form-actions {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
+    
+    /* Contato */
+    .header-logo-container {
+        position: static; /* Move a logo de volta ao fluxo normal */
+        text-align: center;
+        margin-top: 20px;
     }
 
-    .form-suporte {
-        padding: 30px 20px;
+    .img-logo-principal {
+        margin: 0 auto;
     }
-}
 
-/* ============================================================
-   ANIMAÇÕES E DETALHES ADICIONAIS
-   ============================================================ */
-a, button {
-    transition: color var(--transition-speed), background-color var(--transition-speed), transform var(--transition-speed);
-}
+    .main-content-contato {
+        margin-top: 30px;
+    }
 
-h1, h2, h3 {
-    color: var(--text-light);
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    .form-box {
+        padding: 25px;
+    }
+
+    .info-cards {
+        gap: 15px;
+    }
+
+    .card {
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+    }
+    
+    .card img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .card h3 {
+        font-size: 11px;
+    }
+
+    .card p {
+        font-size: 10px;
+    }
+
+    /* Avaliação */
+    .content-wrapper-avaliacao h1 {
+        font-size: 2em;
+        padding: 15px 30px;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+    
+    .header-sobre h1 {
+        font-size: 1.5em;
+    }
 }

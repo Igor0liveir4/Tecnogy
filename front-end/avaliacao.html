@@ -3,199 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Avaliação - Tecnogy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> </head>
+<body class="avaliacao-page">
 
-</head>
-    <style>
-         :root {
-        --bg-gradient-start: #6c717d; /* Cinza claro */
-        --bg-gradient-end: #343740;   /* Cinza escuro */
-        --form-bg: rgba(160, 164, 175, 0.6); 
-        --card-bg: #9fa4ad;           /* CINZA (Cor dos cards) */
-        --white: #ffffff;
-        --black-border: #000000;
-    }
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
-            font-family: 'Arial', sans-serif;
-            color: var(--white);
-        }
-        
-        
-        /* TÍTULO E BOTÃO */
-        .content-wrapper {
-            text-align: center;
-            margin-top: 60px;
-        }
+    <header>
+        <nav class="main-nav" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="avaliacao.html">Avaliação</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        .content-wrapper h1 {
-            margin-bottom: 20px;
-            font-size: 3em;
-            font-weight: 700;
-            color: #000000;
-
-            /* Fundo do título */
-            background: var(--form-bg);
-            display: inline-block;
-            padding: 20px 50px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* SEÇÃO DE AVALIAÇÕES */
-        .avaliacoes {
-            text-align: center;
-            padding: 8% 0;
-            background-color: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
-        }
-
-        .section-title {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 40px;
-            color: #1A1A1A;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cards-container {
-            display: grid;
-            justify-content: center;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  /* Ajuste da largura dos cards */
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: #ffffff;
-            color: #333;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 100%;
-            max-width: 350px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .user-icon {
-            font-size: 45px;
-            background: #FFBB00;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: -40px auto 15px auto;
-        }
-
-        .card p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .stars {
-            font-size: 26px;
-            color: #F4B400;
-        }
-
-        /* SEPARADOR ENTRE SEÇÕES */
-        hr {
-            margin: 60px auto;
-            width: 80%;
-            border: 1px solid #ddd;
-        }
-
-        /* RODAPÉ */
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #222;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            font-size: 0.9em;
-        }
-
-        footer a {
-            color: #fffb00;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-
-</head>
-<body>
-
-    <!-- TÍTULO + BOTÃO -->
-    <div class="content-wrapper">
+    <div class="content-wrapper-avaliacao">
         <h1>Avaliações</h1>
     </div>
 
-    <!-- SESSÃO DE AVALIAÇÕES COM FUNDO BRANCO -->
     <section class="avaliacoes">
-        <!-- TÍTULO DA PRIMEIRA SEÇÃO -->
-        <div class="section-title">Avaliações Populares</div>
+        <h2 class="section-title">Avaliações Populares</h2>
 
         <div class="cards-container">
-            <div class="card">
+            <div class="card-avaliacao">
                 <div class="user-icon">👤</div>
                 <p><strong>Carlos Mendes:</strong> "A qualidade do código superou minhas expectativas. Arquitetura limpa, bem documentada e escalável. Recomendo fortemente!"</p>
                 <div class="stars">⭐⭐⭐⭐⭐</div>
             </div>
 
-            <div class="card">
+            <div class="card-avaliacao">
                 <div class="user-icon">👤</div>
                 <p><strong>Fernanda Souza:</strong> "Ferramentas incríveis que agilizaram muito meu fluxo de trabalho. A integração com outras APIs é perfeita e sem bugs."</p>
                 <div class="stars">⭐⭐⭐⭐⭐</div>
             </div>
 
-            <div class="card">
+            <div class="card-avaliacao">
                 <div class="user-icon">👤</div>
                 <p><strong>João Silva:</strong> "O suporte técnico é de outro nível. Tive uma dúvida sobre a implementação e a equipe de devs me ajudou em minutos."</p>
                 <div class="stars">⭐⭐⭐⭐⭐</div>
             </div>
         </div>
 
-        <!-- SEPARADOR -->
         <hr>
 
-        <!-- TÍTULO DA SEGUNDA SEÇÃO -->
-        <div class="section-title">Avaliações Recentes</div>
+        <h2 class="section-title">Avaliações Recentes</h2>
 
         <div class="cards-container">
-            <div class="card">
+            <div class="card-avaliacao">
                 <div class="user-icon">👤</div>
                 <p><strong>Roberto Dias:</strong> "Impressionado com a velocidade do site. Otimização de performance nota 10, essencial para nós devs."</p>
                 <div class="stars">⭐⭐⭐⭐⭐</div>
             </div>
 
-            <!-- NOVO CARD 1 -->
-            <div class="card">
+            <div class="card-avaliacao">
                 <div class="user-icon">👤</div>
                 <p><strong>Mariana Rocha:</strong> "A interface é extremamente intuitiva. Em poucos minutos já estava usando todas as funcionalidades sem dificuldade."</p>
                 <div class="stars">⭐⭐⭐⭐⭐</div>
             </div>
 
-            <!-- NOVO CARD 2 -->
-            <div class="card">
+            <div class="card-avaliacao">
                 <div class="user-icon">👤</div>
                 <p><strong>Eduardo Lima:</strong> "Excelente projeto! Ótima performance e código muito bem estruturado. Me ajudou muito no desenvolvimento dos meus apps."</p>
                 <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -203,7 +71,6 @@
         </div>
     </section>
 
-    <!-- RODAPÉ -->
     <footer>
         <p>&copy; 2025 Tecnogy. Todos os direitos reservados.</p>
         <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>

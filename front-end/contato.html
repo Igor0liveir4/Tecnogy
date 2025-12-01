@@ -5,180 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecnogy - Contato</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> </head>
 
-    <style>
-        /* RESET BÁSICO */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            /* Fundo degradê */
-            background: linear-gradient(180deg, #9fa4ac 0%, #3e4453 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 20px;
-        }
-
-        /* --- LOGO (APENAS A IMAGEM NO TOPO) --- */
-        .header-logo {
-            position: absolute;
-            top: 30px;
-            left: 40px;
-            z-index: 10;
-        }
-
-        /* ESTILO DA IMAGEM DA LOGO */
-        .img-logo-principal {
-            width: 100px; /* Aumentei um pouco já que está sozinha */
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            
-            /* Borda Roxa e Brilho Neon */
-            border: 3px solid #9e6be8;
-            box-shadow: 0 0 15px rgba(158, 107, 232, 0.6);
-            
-            background-color: #000; /* Fundo preto caso a imagem não carregue */
-        }
-
-        /* --- ÁREA DO FORMULÁRIO --- */
-        .main-content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin-top: 50px; 
-        }
-
-        .form-box {
-            background-color: rgba(255, 255, 255, 0.25); /* Vidro */
-            padding: 40px;
-            border-radius: 15px;
-            width: 500px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .form-box h2 {
-            color: white;
-            font-size: 28px;
-            margin-bottom: 30px;
-            text-decoration: underline;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            line-height: 1.2;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #000;
-            font-size: 16px;
-            font-weight: bold;
-            outline: none;
-            background: white;
-        }
-
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
-            color: #888;
-            font-weight: bold;
-        }
-
-        .btn-enviar {
-            width: 180px;
-            margin: 10px auto 0;
-            padding: 12px;
-            background: linear-gradient(to bottom, #777, #444);
-            color: white;
-            border: none;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-            text-transform: capitalize;
-        }
-
-        .btn-enviar:hover {
-            background: linear-gradient(to bottom, #666, #222);
-        }
-
-        /* --- CARDS INFERIORES --- */
-        .info-cards {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            width: 100%;
-            padding: 20px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            background-color: rgba(160, 164, 172, 0.6);
-            width: 200px;
-            height: 200px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 15px;
-            color: white;
-        }
-
-        .card img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            font-size: 13px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            font-weight: 800;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-        }
-
-        .card p {
-            font-size: 12px;
-            word-wrap: break-word;
-            line-height: 1.4;
-        }
-    </style>
-</head>
-
-<body>
+<body class="contato-page">
     
-    <!-- HEADER: APENAS A IMAGEM -->
-    <header class="header-logo">
-        <!-- IMPORTANTE: Se sua imagem for JPG, mude para logo.jpg abaixo -->
-        <img src="img/logo.png" alt="Logo Tecnogy" class="img-logo-principal">
+    <header>
+        <nav class="main-nav" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="avaliacao.html">Avaliação</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="main-content">
+    <div class="header-logo-container">
+        <img src="img/logo.png" alt="Logo Tecnogy" class="img-logo-principal">
+    </div>
+
+    <main class="main-content-contato">
         <div class="form-box">
             <h2>Entrar em contato <br> conosco</h2>
 
             <form class="contact-form" action="#" method="post">
                 <input type="text" name="nome" placeholder="Enter your Name" required>
                 <input type="email" name="email" placeholder="Enter a valid email address" required>
-                <textarea name="mensagem" rows="5"></textarea>
+                <textarea name="mensagem" rows="5" placeholder="Sua Mensagem"></textarea>
                 <button type="submit" class="btn-enviar">Enviar</button>
             </form>
         </div>
@@ -207,6 +60,7 @@
             <p>contato@tecnogy.com</p>
         </div>
     </div>
+
     <footer>
         <p>&copy; 2025 Tecnogy. Todos os direitos reservados.</p>
         <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
