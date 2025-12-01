@@ -131,7 +131,6 @@ header {
 .main-nav a:hover,
 .main-nav a:focus {
     color: var(--accent-color);
-    background-color: var(--accent-color); /* Fundo roxo ao passar o mouse */
     box-shadow: 0 0 10px var(--accent-color); /* Brilho neon no botão */ 
 }
 
