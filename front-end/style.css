@@ -75,10 +75,32 @@ header {
     background-color: transparent;
     color: white; 
     text-align: center;
+    z-index: 100; /*Garante que o menu fique acima de tudo*/
 }
 
 .main-nav {
     width: 100%;
+    display: flex; /* Ativa o Flexbox no container pai */
+    justify-content: space-between; /* Logo na esquerda, Menu na direita */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro levemente transparente */
+    padding: 15px 50px; /* Espaçamento interno */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra suave abaixo do menu */
+}
+
+.header-logo {
+    height: 60px; /* Define altura fixa para não quebrar o layout */
+    width: auto;  /* Mantém a proporção */
+    cursor: pointer;
+    transition: transform var(--transition-speed), filter var(--transition-speed);
+    display: block; /* Remove espaços fantasmas abaixo da imagem */
+}
+
+/* Efeito Hover no Logo (Usa sua cor neon) */
+.header-logo:hover {
+    transform: scale(1.1); /* Aumenta levemente */
+    /* Cria um brilho roxo usando variável global */
+    filter: drop-shadow(0 0 8px var(--accent-color)); 
 }
 
 .main-nav ul {
@@ -86,37 +108,37 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo sutil para o menu */
-    /* AJUSTE SOLICITADO: Aumenta o padding para crescer o box preto */
-    padding: 25px 0; 
+    background-color: transparent;
 }
 
 .main-nav li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 .main-nav a {
     color: var(--text-light);
     text-decoration: none;
     font-size: 1.1em;
-    padding: 5px 10px;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
     transition: color var(--transition-speed);
+    font-weight: 500;
 }
 
 .main-nav a i {
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 .main-nav a:hover,
 .main-nav a:focus {
-    color: var(--accent-color); 
+    color: var(--accent-color);
+    background-color: var(--accent-color); /* Fundo roxo ao passar o mouse */
+    box-shadow: 0 0 10px var(--accent-color); /* Brilho neon no botão */ 
 }
 
-
 /*PÁGINA: HOME*/
-
 .hero {
     width: 100%;
     padding: 30px 20px;
@@ -144,10 +166,12 @@ header {
     padding: 20px;
     text-align: left;
 }
+
 .hero .card h3 {
     font-size: 16px;
     margin-bottom: 10px;
 }
+
 .hero .card p {
     font-size: 14px;
 }
@@ -377,7 +401,6 @@ header {
 }
 
 /*PÁGINA: SOBRE*/
-
 .sobre-page > header {
     background-color: transparent; 
     padding: 20px;
