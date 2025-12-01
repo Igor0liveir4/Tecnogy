@@ -24,10 +24,13 @@
     --input-bg: #1a1a1a;
     --input-border: #444;
 
-    /* Variáveis da Página Contato (Usadas agora como Padrão) */
+    /* COR DE DESTAQUE PRINCIPAL (NEON) */
+    --accent-color: #9e6be8; 
+
+    /* Variáveis da Página Contato */
     --contato-bg-start: #9fa4ac;
     --contato-bg-end: #3e4453;
-    --logo-neon-color: #9e6be8;
+    --logo-neon-color: var(--accent-color);
     --form-box-bg-contato: rgba(255, 255, 255, 0.25);
     --btn-contato-start: #777;
     --btn-contato-end: #444;
@@ -58,27 +61,23 @@ body {
     min-height: 100vh;
     width: 100%;
     
-    /* GRADIENTE DE FUNDO PADRÃO (Da página de Contato, aplicado a todos) */
     background: linear-gradient(180deg, var(--contato-bg-start) 0%, var(--contato-bg-end) 100%);
     
     color: var(--text-normal);
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; 
     justify-content: space-between;
     padding-bottom: 20px;
 }
 
-/* Garantir que as classes de página não sobrescrevam o fundo, mas definam a cor do texto */
 .avaliacao-page, .contato-page {
-    /* Fundo herdado do body */
     color: var(--white);
 }
 
 .sobre-page {
-    /* Fundo herdado do body */
-    color: var(--sobre-text-color); /* Cor branca para o texto sobre o fundo escuro */
+    color: var(--sobre-text-color);
 }
 
 
@@ -87,12 +86,11 @@ body {
     ============================================================ */
 header {
     width: 100%;
-    background-color: transparent; /* Padrão */
+    background-color: transparent;
     color: white; 
     text-align: center;
 }
 
-/* Menu de navegação (Fundo escuro e transparente para o menu em si) */
 .main-nav {
     width: 100%;
 }
@@ -105,7 +103,9 @@ header {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7); /* Fundo sutil para o menu */
-    padding: 15px 0;
+    
+    /* AJUSTE SOLICITADO: Aumenta o padding para crescer o box preto */
+    padding: 25px 0; 
 }
 
 .main-nav li {
@@ -126,14 +126,55 @@ header {
 
 .main-nav a:hover,
 .main-nav a:focus {
-    color: var(--accent-gold); /* Amarelo dourado como destaque */
+    color: var(--accent-color); 
 }
+
+
+/* ============================================================
+    PÁGINA: HOME
+    ============================================================ */
+
+.hero {
+    width: 100%;
+    padding: 30px 20px;
+    background-color: rgba(160, 164, 172, 0.4); 
+    flex-grow: 1; 
+    
+    /* Centraliza o conteúdo da Home */
+    text-align: center; 
+}
+
+.titulo-principal {
+    font-size: 2.5em;
+    margin-bottom: 30px; 
+    color: var(--white); 
+    text-align: center; 
+}
+
+.hero .info-cards {
+    margin-top: 50px;
+}
+
+.hero .card {
+    background-color: var(--card-bg-contato);
+    height: auto; 
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+}
+.hero .card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.hero .card p {
+    font-size: 14px;
+}
+
 
 /* ============================================================
     PÁGINA: CONTATO
     ============================================================ */
 
-/* Container da Logo (Para posicionar a imagem) */
 .header-logo-container {
     position: absolute;
     top: 30px;
@@ -141,7 +182,6 @@ header {
     z-index: 10;
 }
 
-/* Estilo da Imagem da Logo */
 .img-logo-principal {
     width: 100px;
     height: 100px;
@@ -152,18 +192,17 @@ header {
     background-color: var(--black);
 }
 
-/* Área principal do Contato */
 .main-content-contato {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 100px; /* Espaço para o menu e logo */
+    margin-top: 100px;
 }
 
 .form-box {
-    background-color: var(--form-box-bg-contato); /* Vidro */
+    background-color: var(--form-box-bg-contato);
     padding: 40px;
     border-radius: 15px;
     width: 500px;
@@ -272,10 +311,9 @@ header {
     PÁGINA: AVALIAÇÃO
     ============================================================ */
 
-/* TÍTULO E BOTÃO */
 .content-wrapper-avaliacao {
     text-align: center;
-    margin-top: 100px; /* Compensa o menu fixo */
+    margin-top: 100px; 
 }
 
 .content-wrapper-avaliacao h1 {
@@ -284,7 +322,6 @@ header {
     font-weight: 700;
     color: var(--black);
 
-    /* Fundo do título */
     background: var(--avaliacao-form-bg);
     display: inline-block;
     padding: 20px 50px;
@@ -292,7 +329,6 @@ header {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* SEÇÃO DE AVALIAÇÕES */
 .avaliacoes {
     text-align: center;
     padding: 4% 0;
@@ -302,7 +338,7 @@ header {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 40px;
-    color: var(--white); /* Mudança para branco */
+    color: var(--white);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -359,7 +395,6 @@ header {
     color: var(--star-color);
 }
 
-/* SEPARADOR ENTRE SEÇÕES */
 .avaliacoes hr {
     margin: 60px auto;
     width: 80%;
@@ -370,7 +405,6 @@ header {
     PÁGINA: SOBRE
     ============================================================ */
 
-/* Header para pagina SOBRE - Fundo Transparente agora */
 .sobre-page > header {
     background-color: transparent; 
     padding: 20px;
@@ -406,10 +440,75 @@ header {
     max-width: 1000px;
     width: 100%;
     text-align: center;
+    /* Correção de altura */
+    flex-grow: 1; 
 }
 
-.main-sobre h2, .main-sobre p {
+.main-sobre h2, .main-sobre h3 {
     color: var(--sobre-text-color);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* NOVOS ESTILOS PARA CONTEÚDO DA PÁGINA SOBRE */
+.valores {
+    padding: 30px 0;
+}
+
+.cards-valores {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap; 
+}
+
+.card-valor {
+    width: 250px;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.4); 
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+.card-valor:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
+                0 0 15px var(--accent-color);
+}
+
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
+                0 0 10px var(--accent-color); 
+    background-color: rgba(160, 164, 172, 0.8);
+    cursor: pointer;
+}
+.card-valor i {
+    font-size: 3em;
+    color: var(--accent-color); 
+    margin-bottom: 15px;
+}
+
+.card-valor h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card-valor p {
+    font-size: 0.9em;
+    color: var(--text-normal);
+}
+
+.equipe {
+    padding: 30px 0;
+    margin-bottom: 50px; 
 }
 
 
@@ -450,7 +549,7 @@ footer a:hover {
     
     /* Contato */
     .header-logo-container {
-        position: static; /* Move a logo de volta ao fluxo normal */
+        position: static; 
         text-align: center;
         margin-top: 20px;
     }
@@ -503,5 +602,19 @@ footer a:hover {
     
     .header-sobre h1 {
         font-size: 1.5em;
+    }
+    
+    /* Home */
+    .hero .info-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Sobre */
+    .cards-valores {
+        gap: 20px;
+    }
+    .card-valor {
+        width: 100%;
+        max-width: 300px;
     }
 }
