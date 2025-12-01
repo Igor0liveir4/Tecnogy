@@ -84,7 +84,7 @@ header {
     align-items: center; /* Centraliza verticalmente */
     background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro levemente transparente */
     padding: 15px 50px; /* Espaçamento interno */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra suave abaixo do menu */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.8); /* Sombra suave abaixo do menu */
 }
 
 .header-logo {
