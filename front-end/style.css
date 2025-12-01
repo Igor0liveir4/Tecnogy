@@ -1,6 +1,4 @@
-/* ============================================================
-    RESET E VARIÁVEIS GLOBAIS
-    ============================================================ */
+/*RESET E VARIÁVEIS GLOBAIS*/
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +12,6 @@
     --border-radius: 8px;
     --white: #ffffff;
     --black: #000000;
-
     /* Variáveis de Fundo e Texto Padrão (Dark Theme Sugerido) */
     --dark-bg-1: #0a0a0a; 
     --dark-bg-2: #2c2c2c; 
@@ -23,10 +20,8 @@
     --text-normal: #e5e5e5;
     --input-bg: #1a1a1a;
     --input-border: #444;
-
     /* COR DE DESTAQUE PRINCIPAL (NEON) */
     --accent-color: #9e6be8; 
-
     /* Variáveis da Página Contato */
     --contato-bg-start: #9fa4ac;
     --contato-bg-end: #3e4453;
@@ -37,21 +32,17 @@
     --btn-contato-hover-start: #666;
     --btn-contato-hover-end: #222;
     --card-bg-contato: rgba(160, 164, 172, 0.6);
-
     /* Variáveis da Página Avaliação */
     --star-color: #F4B400;
     --user-icon-bg: #FFBB00;
     --card-bg-avaliacao: #ffffff;
     --card-text-avaliacao: #333;
     --avaliacao-form-bg: rgba(160, 164, 175, 0.6); 
-    
     /* Variáveis da Página Sobre */
     --sobre-text-color: var(--white);
 }
 
-/* ============================================================
-    BODY E ESTRUTURA BASE (Fundo Padrão para Todas as Páginas)
-    ============================================================ */
+/*BODY E ESTRUTURA BASE (Fundo Padrão para Todas as Páginas)*/
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -60,9 +51,7 @@ html {
 body {
     min-height: 100vh;
     width: 100%;
-    
     background: linear-gradient(180deg, var(--contato-bg-start) 0%, var(--contato-bg-end) 100%);
-    
     color: var(--text-normal);
     line-height: 1.6;
     display: flex;
@@ -80,10 +69,7 @@ body {
     color: var(--sobre-text-color);
 }
 
-
-/* ============================================================
-    HEADER DE NAVEGAÇÃO GLOBAL
-    ============================================================ */
+/*HEADER DE NAVEGAÇÃO GLOBAL*/
 header {
     width: 100%;
     background-color: transparent;
@@ -103,7 +89,6 @@ header {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7); /* Fundo sutil para o menu */
-    
     /* AJUSTE SOLICITADO: Aumenta o padding para crescer o box preto */
     padding: 25px 0; 
 }
@@ -130,16 +115,13 @@ header {
 }
 
 
-/* ============================================================
-    PÁGINA: HOME
-    ============================================================ */
+/*PÁGINA: HOME*/
 
 .hero {
     width: 100%;
     padding: 30px 20px;
     background-color: rgba(160, 164, 172, 0.4); 
     flex-grow: 1; 
-    
     /* Centraliza o conteúdo da Home */
     text-align: center; 
 }
@@ -170,11 +152,7 @@ header {
     font-size: 14px;
 }
 
-
-/* ============================================================
-    PÁGINA: CONTATO
-    ============================================================ */
-
+/*PÁGINA: CONTATO*/
 .header-logo-container {
     position: absolute;
     top: 30px;
@@ -307,10 +285,7 @@ header {
     line-height: 1.4;
 }
 
-/* ============================================================
-    PÁGINA: AVALIAÇÃO
-    ============================================================ */
-
+/*PÁGINA: AVALIAÇÃO*/
 .content-wrapper-avaliacao {
     text-align: center;
     margin-top: 100px; 
@@ -401,9 +376,7 @@ header {
     border: 1px solid #ddd;
 }
 
-/* ============================================================
-    PÁGINA: SOBRE
-    ============================================================ */
+/*PÁGINA: SOBRE*/
 
 .sobre-page > header {
     background-color: transparent; 
@@ -476,12 +449,12 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s;
 }
+
 .card-valor:hover {
     transform: translateY(-5px); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
                 0 0 15px var(--accent-color);
 }
-
 
 .card:hover {
     transform: translateY(-5px); 
@@ -511,10 +484,7 @@ header {
     margin-bottom: 50px; 
 }
 
-
-/* ============================================================
-    RODAPÉ (GLOBAL)
-    ============================================================ */
+/*RODAPÉ (GLOBAL)*/
 footer {
     text-align: center;
     padding: 30px;
