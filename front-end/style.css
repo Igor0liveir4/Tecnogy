@@ -173,7 +173,6 @@ header {
 }
 
 /*PÁGINA: CONTATO*/
-
 /* Os blocos .header-logo-container e .img-logo-principal foram mantidos por histórico, mas não são usados no HTML Contato atual */
 .header-logo-container {
     position: absolute;
@@ -409,10 +408,10 @@ header {
 }
 
 /*PÁGINA: SOBRE*/
-
 .sobre-page > header {
     background-color: transparent; 
-    padding: 20px;
+    padding: 0px;
+    width: 100%;
 }
 
 .header-sobre h1 {
