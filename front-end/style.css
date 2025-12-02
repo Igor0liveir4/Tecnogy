@@ -13,15 +13,15 @@
     --white: #ffffff;
     --black: #000000;
     /* Variáveis de Fundo e Texto Padrão (Dark Theme Sugerido) */
-    --dark-bg-1: #0a0a0a; 
-    --dark-bg-2: #2c2c2c; 
-    --accent-bg1: #3a3a3a; 
+    --dark-bg-1: #0a0a0a;
+    --dark-bg-2: #2c2c2c;
+    --accent-bg1: #3a3a3a;
     --text-light: #ffffff;
     --text-normal: #e5e5e5;
     --input-bg: #1a1a1a;
     --input-border: #444;
     /* cor de destaque principal (NEON) */
-    --accent-color: #9e6be8; 
+    --accent-color: #9e6be8;
     /* Variáveis da Página Contato */
     --contato-bg-start: #9fa4ac;
     --contato-bg-end: #3e4453;
@@ -37,7 +37,7 @@
     --user-icon-bg: #FFBB00;
     --card-bg-avaliacao: #ffffff;
     --card-text-avaliacao: #333;
-    --avaliacao-form-bg: rgba(160, 164, 175, 0.6); 
+    --avaliacao-form-bg: rgba(160, 164, 175, 0.6);
     /* Variáveis da Página Sobre */
     --sobre-text-color: var(--white);
 }
@@ -56,7 +56,7 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     justify-content: space-between;
     padding-bottom: 20px;
 }
@@ -73,31 +73,31 @@ body {
 header {
     width: 100%;
     background-color: transparent;
-    color: white; 
+    color: white;
     text-align: center;
 }
 
 .main-nav {
     width: 100%;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    background-color: rgba(0, 0, 0, 0.8); 
-    padding: 15px 50px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .header-logo {
-    height: 60px; 
-    width: auto;  
+    height: 60px;
+    width: auto;
     cursor: pointer;
     transition: transform var(--transition-speed), filter var(--transition-speed);
-    display: block; 
+    display: block;
 }
 
 /* Efeito Hover no Logo */
 .header-logo:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 .main-nav ul {
@@ -105,10 +105,10 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); 
-    padding: 25px 0; 
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 25px 0;
 }
 
 .main-nav li {
@@ -131,7 +131,7 @@ header {
 .main-nav a:hover,
 .main-nav a:focus {
     color: var(--accent-color);
-    box-shadow: 0 0 10px var(--accent-color); 
+    box-shadow: 0 0 10px var(--accent-color);
 }
 
 /*PÁGINA: HOME*/
@@ -139,16 +139,16 @@ header {
 .hero {
     width: 100%;
     padding: 30px 20px;
-    background-color: rgba(160, 164, 172, 0.4); 
-    flex-grow: 1; 
-    text-align: center; 
+    background-color: rgba(160, 164, 172, 0.4);
+    flex-grow: 1;
+    text-align: center;
 }
 
 .titulo-principal {
     font-size: 2.5em;
-    margin-bottom: 30px; 
-    color: var(--white); 
-    text-align: center; 
+    margin-bottom: 30px;
+    color: var(--white);
+    text-align: center;
 }
 
 .hero .info-cards {
@@ -157,7 +157,7 @@ header {
 
 .hero .card {
     background-color: var(--card-bg-contato);
-    height: auto; 
+    height: auto;
     width: 300px;
     padding: 20px;
     text-align: left;
@@ -309,9 +309,9 @@ header {
 
 /* HOVER para cards de Home e Contato */
 .card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
-                0 0 10px var(--accent-color); 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4),
+                0 0 10px var(--accent-color);
     background-color: rgba(160, 164, 172, 0.8);
     cursor: pointer;
 }
@@ -319,7 +319,7 @@ header {
 /* PÁGINA: AVALIAÇÃO*/
 .content-wrapper-avaliacao {
     text-align: center;
-    margin-top: 100px; 
+    margin-top: 100px;
 }
 
 .content-wrapper-avaliacao h1 {
@@ -433,7 +433,7 @@ header {
 .header-sobre hr {
     border: 0;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.5); 
+    background-color: rgba(255, 255, 255, 0.5);
     margin: 0 0 15px 0;
 }
 
@@ -443,12 +443,12 @@ header {
     max-width: 1000px;
     width: 100%;
     text-align: center;
-    flex-grow: 1; 
+    flex-grow: 1;
     display: block;
 }
 
 .main-sobre h2, .main-sobre h3 {
-    width: 100%; 
+    width: 100%;
     color: var(--sobre-text-color);
     margin-top: 40px;
     margin-bottom: 20px;
@@ -460,7 +460,7 @@ header {
 .team-cards-container {
     display: flex;
     justify-content: center; /* Centraliza os cards */
-    gap: 30px; 
+    gap: 30px;
     padding: 20px 0;
     width: 100%;
     max-width: 900px; /* Limita a largura total para ajudar na centralização */
@@ -469,17 +469,17 @@ header {
 
 /* Estilo de cada Card Individual da Equipe */
 .team-member-card {
-    background-color: rgba(0, 0, 0, 0.4); 
-    padding: 25px; 
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
-    
+
     /* ALTERAÇÃO CHAVE: Define o tamanho para 2 por linha */
-    flex-basis: 45%; 
-    min-width: 250px; 
-    max-width: 450px; 
-    
+    flex-basis: 45%;
+    min-width: 250px;
+    max-width: 450px;
+
     width: 100%;
     transition: transform 0.3s, box-shadow 0.3s;
     margin: 0 auto; /* Centraliza o card quando estiver sozinho na linha (em telas menores) */
@@ -487,29 +487,29 @@ header {
 
 .team-member-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 
-                0 0 10px var(--accent-color); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5),
+                0 0 10px var(--accent-color);
 }
 
 .team-member-card .member-photo {
-    width: 100%; 
-    height: 220px; 
-    max-width: 220px; 
+    width: 100%;
+    height: 220px;
+    max-width: 220px;
     object-fit: cover;
-    border-radius: 50%; 
+    border-radius: 50%;
     margin-bottom: 15px;
     border: 3px solid var(--accent-color);
 }
 
 .team-member-card h3 {
     color: var(--white);
-    font-size: 1.2em; 
+    font-size: 1.2em;
     margin-bottom: 8px;
 }
 
 .team-member-card p {
     color: var(--text-normal);
-    font-size: 1em; 
+    font-size: 1em;
     line-height: 1.5;
     text-align: center;
 }
@@ -525,13 +525,13 @@ header {
     justify-content: center;
     gap: 40px;
     margin-top: 30px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .card-valor {
     width: 250px;
     padding: 25px;
-    background-color: rgba(0, 0, 0, 0.4); 
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: var(--border-radius);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -541,14 +541,14 @@ header {
 }
 
 .card-valor:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4),
                 0 0 15px var(--accent-color);
 }
 
 .card-valor i {
     font-size: 3em;
-    color: var(--accent-color); 
+    color: var(--accent-color);
     margin-bottom: 15px;
 }
 
@@ -571,7 +571,7 @@ footer {
     color: white;
     width: 100%;
     font-size: 0.9em;
-    margin-top: auto; 
+    margin-top: auto;
 }
 
 footer a {
@@ -582,4 +582,35 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* NOVAS REGRAS PARA A SEÇÃO DE SERVIÇOS (CENTRALIZAÇÃO) */
+.services-section {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.services-section h2 {
+    text-align: center;
+    font-size: 2em; 
+    margin-bottom: 30px; 
+    color: var(--white); 
+}
+
+.service-card .card-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: var(--accent-color);
+    color: var(--black);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.service-card .card-link:hover {
+    background-color: var(--white);
+    box-shadow: 0 0 10px var(--accent-color);
 }
