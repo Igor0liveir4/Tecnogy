@@ -58,6 +58,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    
+    /* ADIÇÃO CHAVE: Padding para compensar o header fixo */
+    padding-top: 100px; /* Ajuste este valor se o header ficar muito grande ou pequeno */
     padding-bottom: 20px;
 }
 
@@ -85,6 +88,11 @@ header {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 15px 50px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    
+    /* ALTERAÇÕES CHAVE PARA TORNAR O HEADER FIXO */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-logo {
@@ -107,8 +115,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 25px 0;
+    /* Removido o background-color duplicado e padding para manter o nav compacto */
 }
 
 .main-nav li {
