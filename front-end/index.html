@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnogy</title>
-
-    <!-- Link CSS externo -->
+    <title>Tecnogy - Soluções Digitais e Desenvolvimento Web</title>
+    
     <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <header>
+<body class="home-page">
+    
+    <header class="main-header">
         <nav class="main-nav" aria-label="Menu principal">
             <a href="index.html" class="logo-menu">
-                <img src="img/logo.png" alt="Logo Tecnogy" class="header-logo">
+                <img src="img/logo.png" alt="Logo Tecnogy - Voltar para a Home" class="header-logo">
             </a>
             <ul>
-                <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                <li><a href="index.html" aria-current="page"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
                 <li><a href="sobre.html"><i class="fas fa-users" aria-hidden="true"></i> Sobre</a></li>
                 <li><a href="avaliacao.html"><i class="fas fa-star" aria-hidden="true"></i> Avaliação</a></li>
                 <li><a href="contato.html"><i class="fas fa-envelope" aria-hidden="true"></i> Contato</a></li>
@@ -24,43 +24,54 @@
         </nav>
     </header>
     
-    <section class="hero">
-        <h1 class="titulo-principal">NOSSOS SERVIÇOS </h1>
+    <main>
+        
+        <section class="hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading" class="titulo-principal">Construímos o seu futuro digital.</h1>
+            <p class="hero-subtitulo">Transformando ideias complexas em soluções web simples, rápidas e eficientes.</p>
+            <a href="contato.html" class="btn-cta">Fale Conosco Hoje!</a>
+        </section>
 
-        <div class="info-cards">
+        <hr>
 
-            <div class="card">
-                <h3>Desenvolvedores Web</h3>
-                <p>
-                    Criação de sites institucionais, sistemas web responsivos,
-                    otimizados para SEO e alta performance.
-                </p>
+        <section class="services-section" aria-labelledby="services-heading">
+            <h2 id="services-heading">NOSSOS SERVIÇOS</h2>
+
+            <div class="info-cards">
+
+                <article class="card service-card">
+                    <i class="fas fa-code card-icon" aria-hidden="true"></i>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Criação de sites institucionais, e-commerce e sistemas web responsivos, otimizados para SEO e alta performance.</p>
+                    <a href="contato.html" class="card-link" aria-label="Saiba mais sobre Desenvolvimento Web">Ver Detalhes</a>
+                </article>
+
+                <article class="card service-card">
+                    <i class="fas fa-tachometer-alt card-icon" aria-hidden="true"></i>
+                    <h3>Otimização de Performance</h3>
+                    <p>Melhoria do tempo de carregamento (Core Web Vitals), limpeza de código e otimização de imagens para deixar o seu site voando.</p>
+                    <a href="contato.html" class="card-link" aria-label="Saiba mais sobre Otimização de Performance">Ver Detalhes</a>
+                </article>
+
+                <article class="card service-card">
+                    <i class="fas fa-headset card-icon" aria-hidden="true"></i>
+                    <h3>Manutenção & Suporte</h3>
+                    <p>Acompanhamento contínuo, correção de bugs e atualizações de segurança para garantir que seu site nunca saia do ar.</p>
+                    <a href="contato.html" class="card-link" aria-label="Saiba mais sobre Manutenção e Suporte">Ver Detalhes</a>
+                </article>
+
             </div>
-
-            <div class="card">
-                <h3>Otimização de Performance</h3>
-                <p>
-                    Melhoria do tempo de carregamento (Core Web Vitals),
-                    limpeza de código e otimização de imagens para deixar
-                    o site voando.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Manutenção & Suporte</h3>
-                <p>
-                    Acompanhamento contínuo, correção de bugs e atualizações
-                    de segurança para garantir que seu site nunca sai do ar.
-                </p>
-            </div>
-
-        </div>
-    </section>
+        </section>
+        
+    </main>
     
     <footer>
         <p>&copy; 2025 Tecnogy. Todos os direitos reservados.</p>
-        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
+        <p>
+            <a href="#">Política de Privacidade</a> | 
+            <a href="#">Termos de Serviço</a>
+        </p>
     </footer>
-</body>
 
+</body>
 </html>
