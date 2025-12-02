@@ -408,17 +408,16 @@ header {
 }
 
 /*PÁGINA: SOBRE*/
-.sobre-page > header {
-    background-color: transparent; 
-    padding: 0px;
-    width: 100%;
-}
 
 .header-sobre h1 {
     margin-top: 0;
     font-size: 1.8em;
     color: var(--white);
     padding-top: 20px;
+}
+
+.header-sobre {
+    padding-top: 100px;
 }
 
 .header-sobre p {
